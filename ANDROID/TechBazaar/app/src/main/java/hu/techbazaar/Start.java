@@ -55,7 +55,7 @@ public class Start extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        home();
+                        home(); // főkép
                     } else {
                         ch.setText(R.string.fail_sign_in);
                     }
