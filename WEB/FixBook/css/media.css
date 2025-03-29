@@ -1,0 +1,54 @@
+:root{
+    --vaj: beige;
+    --zoldes: darkslategray;
+    --szurke: lightgray;
+    --lightmandarin: #d0b588;
+}
+@media print{
+    body img { display: none; }
+    header { display: none; }
+    main {border:none;}
+    footer { display: none; }
+    #main fieldset{height: 100%;}
+}
+@media screen and (max-width: 1130px){
+    .dark,.light{
+        position: absolute;
+    }
+    header{
+        position: relative;
+        height: 200px;
+    }
+    header img{
+        position: absolute;
+        top:65px;
+        left: 150px;
+    }
+    #nav{
+        height: 100%;
+        width: 100%;
+    }
+    #nav ul li a{
+        float:none;
+    }
+    #keres{
+        right: 75px;
+    }
+    .kapcs textarea,.kapcs fieldset{
+        width: 400px;
+    }
+    #main{
+        display: grid;
+        float: left;
+    }
+    #main fieldset{
+        height: 10%;
+    }
+}
+@media screen and (max-width: 1850px){
+    .kapcs{
+        width: 700px;
+        display: block;
+        margin: 0 auto;
+    }
+}

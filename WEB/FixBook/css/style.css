@@ -1,0 +1,348 @@
+:root{
+	--vaj: beige;
+	--zoldes: darkslategray;
+	--szurke: lightgray;
+	--lightmandarin: #d0b588;
+}
+#change{
+	visibility: hidden;
+}
+.dark,.light{
+	cursor: pointer;
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	right: 30px;
+}
+.dark{
+	display: block;
+}
+.light{
+	display:none;
+}
+#change:checked ~.dark{
+	display: none;
+}
+#change:checked ~.light{
+	display: block;
+}
+#change:checked ~ main{
+	background-color: black;
+	color:var(--szurke);
+}
+#change:checked ~ #main{
+	background-color: black;
+	color:var(--szurke);
+}
+#change:checked ~ #main a{
+	color:var(--szurke);
+}
+#change:checked ~ #main fieldset{
+	color: var(--szurke);
+	border-color: var(--szurke);
+}
+#change:checked ~ #main input{
+	border-color: var(--szurke);
+	color: var(--szurke);
+}
+#change:checked ~ #main select{
+	background-color: black;
+	color:var(--szurke);
+}
+#change:checked ~ #main select option{
+	background-color: black;
+	color:var(--szurke);
+}
+@keyframes slide-in-welcome {
+	from {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes slide-in {
+	from {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+#welcome {
+	animation: slide-in-welcome 1s ease-out;
+}
+main p, section{
+	animation: slide-in 2.5s ease-out;
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+body{
+	background-color: var(--vaj);
+	margin: 0;
+	padding: 0;
+}
+h1{
+	text-align:center;
+	font-size: 40px;
+}
+header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	background-color: var(--zoldes);
+	z-index: 1;
+}
+#nav{
+	background-color: inherit;
+	width: 750px;
+	height: inherit;
+	font-family: "Arial";
+	float: left;
+}
+#nav ul{
+	font-size:18px;
+	overflow: hidden;
+}
+#nav ul li {
+	list-style-type: none;
+}
+#nav ul a{
+	padding-right: 20px;
+	float: left;
+	display: block;
+	text-decoration:none;
+	color: var(--szurke);
+}
+#nav ul a:hover{
+	text-decoration:none;
+	color:var(--lightmandarin);
+}
+#keres{
+	position: absolute;
+	background-color: inherit;
+	top:10px;
+	right: 100px;
+}
+#keres input{
+	border-color: var(--vaj);
+	border-radius: 5px;
+	background-color: inherit;
+	font-weight: bold;
+	padding: 3px;
+	outline: none;
+	color: var(--vaj);
+}
+#keres input::placeholder{
+	color: var(--vaj);
+}
+section{
+	font-size: 20px;
+	text-align: center;
+}
+#main{
+	display: flex;
+	font-family: "Bookman Old Style";
+	max-width: 100%;
+	color: var(--zoldes);
+	height:100%;
+	padding-bottom: 50px;
+}
+main{
+	font-family: "Bookman Old Style";
+	background-color: var(--vaj);
+	color: var(--zoldes);
+	padding-top: 40px;
+	width: 100%;
+}
+main table{
+	margin: auto;
+	font-size: 25px;
+	border-collapse: collapse;
+}
+main table th, td{
+	padding: 10px;
+}
+.szolgaltat tr:last-of-type{
+	text-align: center;
+	font-size: 18px;
+}
+.rolunk li{
+	padding-bottom: 10px;
+}
+.arak th{
+	font-size: 30px;
+}
+.arak tr td:nth-child(even){
+	text-align: center;
+}
+#video{
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+footer{
+	overflow:auto;
+	float:left;
+	padding-top:5px;
+	background-color: var(--zoldes);
+	color: lightgray;
+	width: 100%;
+}
+.kapcs fieldset{
+	float:left;
+	width: 600px;
+	margin:10px 110px 0 10px;
+	border-radius: 5px;
+	border: 1px solid var(--szurke);
+}
+.kapcs textarea{
+	background-color: var(--zoldes);
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	outline: none;
+	color: lightgray;
+	font-weight: bold;
+	font-size: 20px;
+}
+.kapcs input{
+	outline: none;
+	border-radius: 5px;
+	font-size: 20px;
+	background-color: var(--zoldes);
+	border: 1px solid var(--szurke);
+	color: lightgray;
+}
+#kapcsfel {
+	display: block;
+	margin: auto;
+}
+.elerhetoseg{
+	float:left;
+	margin-left:10px;
+	margin-right: 110px;
+	font-size: 16px;
+	width: 200px;
+}
+.elerhetoseg td,.side td{
+	padding:15px;
+}
+.elerhetoseg a,.social a{
+	text-decoration: none;
+	color: var(--szurke);
+}
+.elerhetoseg a:hover,.social a:hover{
+	color: var(--lightmandarin);
+}
+.elerhetoseg caption,.side caption{
+	font-size: 26px;
+	text-decoration: underline;
+}
+#egyberak{
+	margin-top:10px;
+	float:left;
+}
+.side{
+	width:370px;
+	font-size: 20px;
+	float:left;
+	margin-right: 110px;
+}
+.social{
+	width:200px;
+	font-size: 20px;
+	float: left;
+	text-align: center;
+}
+.social th{
+	text-decoration: underline;
+	font-size:26px;
+}
+.social tr:last-of-type img:hover{
+	background-color: lightslategrey;
+	box-shadow: 0 2px 7px 8px lightslategrey;
+	transition: all 300ms ease-in-out;
+	margin-bottom: 7px;
+}
+.bejelent{
+	font-size: 18px;
+	margin-top: 150px;
+	margin-left: auto;
+	background-color: transparent;
+	height:250px;
+	max-width: 100%;
+	text-align: center;
+	margin-right: 150px;
+}
+.bejelent fieldset{
+	color: var(--zoldes);
+	border: 2px solid var(--zoldes);
+	border-radius: 5px;
+}
+.bejelent input{
+	border: 2px solid var(--zoldes);
+	border-radius: 5px;
+	background-color:transparent;
+	font-weight: bold;
+	padding: 7px;
+	outline: none;
+	color: var(--zoldes);
+}
+.bejelent a{
+	text-decoration: none;
+	color: var(--zoldes);
+}
+.bejelent a:hover{
+	text-decoration: underline;
+}
+.bejelent input[type="submit"]{
+	padding:10px 20px;
+	font-size: 14px;
+}
+.regiszt{
+	font-size: 18px;
+	margin-top: 150px;
+	margin-right: auto;
+	background-color: transparent;
+	height:100%;
+	max-width:550px;
+}
+.regiszt fieldset{
+	height:100%;
+	color: var(--zoldes);
+	border: 2px solid var(--zoldes);
+	border-radius: 5px;
+}
+.regiszt input{
+	border: 2px solid var(--zoldes);
+	border-radius: 5px;
+	background-color: transparent;
+	font-weight: bold;
+	padding: 7px;
+	outline: none;
+	color: var(--zoldes);
+}
+.regiszt input[type="submit"], input[type="reset"]{
+	width: 150px;
+	display: inline;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+.regiszt input[type="checkbox"]{
+	accent-color: var(--zoldes);
+}
+.regiszt select{
+	background-color:var(--vaj);
+	border-radius:5px;
+	font-weight: bold;
+	color:var(--zoldes);
+}
+.regiszt select option{
+	background-color:var(--vaj);
+}

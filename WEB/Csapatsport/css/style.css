@@ -1,0 +1,159 @@
+:root{
+	--vaj: beige;
+	--zoldes: darkslategray;
+	--szurke: lightgray;
+	--lightmandarin: #d0b588;
+}
+body{
+	background-color: var(--vaj);
+	margin: 0;
+	padding: 0;
+}
+header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	background-color: var(--zoldes);
+	z-index: 1;
+}
+#menu
+{
+	width: 1250px;
+	margin: 10px auto 0;
+	font-size:30px
+}
+#menu ul
+{
+	padding: 0;
+	margin: 0;
+	color:var(--vaj);
+	background:var(--zoldes);
+	width:100%;
+}
+#menu li
+{
+	position:relative;
+	float:left;
+	list-style-type:none;
+	text-align:center;
+}
+#menu li a
+{
+	display:block;
+	text-decoration:none;
+	color:var(--vaj);
+	width:200px;
+}
+#menu ul ul
+{
+	position:absolute;
+	display:none;
+}
+#menu ul li ul
+{
+	display:none;
+}
+#menu ul li:hover ul
+{
+	display:block;
+}
+#menu li a:hover
+{
+	color:var(--lightmandarin);
+}
+.bejelent{
+    margin: 0 auto;
+	font-size: 18px;
+	background-color: transparent;
+	height:100%;
+	width: 150px;
+	text-align: center;
+    padding-top: 50px;
+}
+.bejelent fieldset{
+	color: var(--zoldes);
+	border: 2px solid var(--zoldes);
+	border-radius: 5px;
+}
+.bejelent input{
+	border: 2px solid var(--zoldes);
+	border-radius: 5px;
+	background-color:transparent;
+	font-weight: bold;
+	padding: 7px;
+	outline: none;
+	color: var(--zoldes);
+}
+.bejelent input[type="submit"]{
+	padding:10px 20px;
+	font-size: 14px;
+}
+.regiszt{
+    margin: 0 auto;
+	font-size: 18px;	
+	background-color: transparent;
+	height:100%;
+	width:150px;
+    padding-top: 100px;
+}
+.regiszt fieldset{
+    width: 150px;
+	height:100%;
+	color: var(--zoldes);
+	border: 2px solid var(--zoldes);
+	border-radius: 5px;
+}
+.regiszt input{
+	border: 2px solid var(--zoldes);
+	border-radius: 5px;
+	background-color: transparent;
+	font-weight: bold;
+	padding: 7px;
+	outline: none;
+	color: var(--zoldes);
+}
+.regiszt input[type="submit"]{
+	width: 150px;
+	display: inline;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+
+#main{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 30px;
+    color: var(--zoldes);
+}
+#main table{
+	margin: 0 auto;
+	border-radius: 10px;
+	padding-bottom: 50px;
+}
+#main table th, td{
+	padding: 10px;
+	border: 2px solid var(--zoldes);
+	border-radius: 5px
+}
+#main table td{
+	font-size: 22px;
+}
+.mode{
+	font-size: 20px;
+	border: 2px solid var(--zoldes);
+	border-radius: 5px;
+	background-color:transparent;
+	padding-left: 30px;
+	padding-right: 30px;
+	outline: none;
+	color: var(--zoldes);
+}
+.mode2{
+	font-size: 20px;
+	border: 2px solid var(--zoldes);
+	border-radius: 5px;
+	background-color:transparent;
+	outline: none;
+	color: var(--zoldes);
+}
