@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Üdvözöllek a TechBazaar webshopban"
         android:textAlignment="center"
-        android:textSize="22sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#FF0000"
         app:layout_constraintTop_toTopOf="parent"
