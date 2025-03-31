@@ -53,9 +53,9 @@ public class Reg extends AppCompatActivity {
 
         first_Auth = FirebaseAuth.getInstance();
 
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
+//        if (getSupportActionBar() != null) {
+//            getSupportActionBar().hide();
+//        }
     }
 
     public void register(View view) {

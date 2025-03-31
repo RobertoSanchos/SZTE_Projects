@@ -35,9 +35,9 @@ public class Start extends AppCompatActivity {
         ch = findViewById(R.id.icheck);
         Main_Auth = FirebaseAuth.getInstance();
 
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
+//        if (getSupportActionBar() != null) {
+//            getSupportActionBar().hide();
+//        }
     }
 
     public void register(View view) {
