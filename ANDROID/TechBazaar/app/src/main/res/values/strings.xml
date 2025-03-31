@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TechBazaar Webshop</string>
+    <string name="username">Felhasználónév</string>
+    <string name="password">Jelszó</string>
+    <string name="login">Bejelentkezés</string>
+    <string name="regist">Regisztráció</string>
+    <string name="logo">tb_logo</string>
+    <string name="email">E-mail cím</string>
+    <string name="password_again">Jelszó újra</string>
+    <string name="back">Mégse</string>
+    <string name="fail_sign_in">Sikertelen belépés!</string>
+    <string name="Missing_field">Töltsd ki az összes mezőt!</string>
+    <string name="search">Keresés</string>
+    <string name="cart">Bevásárlókosár</string>
+    <string name="settings">Beállítások</string>
+    <string name="exit">Kijelentkezés</string>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <style name="Base.Theme.TechBazaar" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">#2C5078</item>
+    </style>
+</resources>
