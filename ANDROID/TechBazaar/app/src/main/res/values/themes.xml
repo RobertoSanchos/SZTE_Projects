@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.TechBazaar" parent="Theme.Material3.DayNight.NoActionBar">
-         <item name="colorPrimary">#2C5078</item>
+         <item name="colorPrimary">@color/Primaryc</item>
     </style>
     <style name="Theme.TechBazaar" parent="Base.Theme.TechBazaar" />
 </resources>
