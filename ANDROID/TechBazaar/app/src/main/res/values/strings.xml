@@ -10,4 +10,8 @@
     <string name="back">Mégse</string>
     <string name="fail_sign_in">Sikertelen belépés!</string>
     <string name="Missing_field">Töltsd ki az összes mezőt!</string>
+    <string name="keres">Keresés</string>
+    <string name="kocsi">Bevásárlókosár</string>
+    <string name="beallitas">Beállítások</string>
+    <string name="kilepes">Kijelentkezés</string>
 </resources>
