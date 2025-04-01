@@ -4,15 +4,21 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
-public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.VH> {
+public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.VH> implements Filterable {
     private ArrayList<items> items;
     private ArrayList<items> items_filter;
     private Context con;
@@ -35,6 +41,13 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.VH> {
         items citem = items.get(position);
 
         holder.bindTo(citem);
+
+        if(holder.getAdapterPosition() > position){
+            Animation ani = AnimationUtils.loadAnimation(con, R.anim.slide_left_to_right);
+            holder.itemView.startAnimation(ani);
+            position = holder.getAdapterPosition();
+        }
+
     }
 
     @Override
@@ -42,6 +55,41 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.VH> {
         return items.size();
     }
 
+    @Override
+    public Filter getFilter() {return web_shop_filter;}
+
+    private Filter web_shop_filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            ArrayList<items> filter_list = new ArrayList<>();
+            FilterResults results = new FilterResults();
+
+            if(constraint == null || constraint.length() == 0){
+                results.count = items.size();
+                results.values = items;
+            }
+            else {
+                String ch_pattern = constraint.toString().toLowerCase().trim();
+
+                for(hu.techbazaar.items item : items){
+                    if(item.getName().toLowerCase().contains(ch_pattern)){
+                        filter_list.add(item);
+                    }
+                }
+
+                results.count = filter_list.size();
+                results.values = filter_list;
+            }
+
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            items = (ArrayList) results.values;
+            notifyDataSetChanged();
+        }
+    };
     class VH extends RecyclerView.ViewHolder{
         private TextView name, desc, price;
         private ImageView img;
@@ -69,7 +117,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.VH> {
             desc.setText(citem.getDesc());
             price.setText(citem.getPrice());
             rate.setRating(citem.getRate());
-
+            Glide.with(con).load(citem.getImgsrc()).into(img);
 
         }
     }

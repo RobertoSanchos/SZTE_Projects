@@ -17,14 +17,14 @@
     />
 <item
     android:id="@+id/notif"
-    android:title="Értesítések"
+    android:title="@string/notification"
     android:icon="@drawable/notifications"
     android:orderInCategory="1"
     app:showAsAction="ifRoom"
     />
 <item
     android:id="@+id/fav"
-    android:title="Kedvencek"
+    android:title="@string/favorite"
     android:icon="@drawable/favorite"
     android:orderInCategory="2"
     app:showAsAction="ifRoom"

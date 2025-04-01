@@ -1,23 +1,21 @@
 package hu.techbazaar;
 
 public class items {
-    private String type, name, desc;
-    private int imgsrc, price;
+    private String name, desc, price;
+    private int imgsrc;
     private float rate;
 
-    public items(String desc, int imgsrc, String name, int price, float rate, String type) {
-        this.desc = desc;
-        this.imgsrc = imgsrc;
+    public items(String name, String desc, String price, int imgsrc, float rate) {
         this.name = name;
+        this.desc = desc;
         this.price = price;
+        this.imgsrc = imgsrc;
         this.rate = rate;
-        this.type = type;
     }
 
-    public String getType() {return type;}
     public String getName() {return name;}
     public String getDesc() {return desc;}
-    public int getPrice() {return price;}
+    public String getPrice() {return price;}
     public float getRate() {return rate;}
     public int getImgsrc() {return imgsrc;}
 }

@@ -1,11 +1,13 @@
 package hu.techbazaar;
 
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,7 +24,34 @@ public class Home_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        home_view = findViewById(R.id.home_content);
+        home_view.setLayoutManager(new GridLayoutManager(this, 2));
+        home_items = new ArrayList<>();
+        iadapter = new HomeAdapter(this, home_items);
+        home_view.setAdapter(iadapter);
+
+        idata();
+
     }
+
+    private void idata() {
+        String[] items_name = getResources().getStringArray(R.array.items_names);
+        String[] items_description = getResources().getStringArray(R.array.items_description);
+        String[] items_price = getResources().getStringArray(R.array.items_prices);
+        TypedArray items_images = getResources().obtainTypedArray(R.array.items_images);
+        TypedArray items_rated = getResources().obtainTypedArray(R.array.items_rates);
+
+        home_items.clear();
+
+        for (int i = 0; i < items_name.length;i++){
+            home_items.add(new items(items_name[i], items_description[i],
+                    items_price[i], items_images.getResourceId(i,0), items_rated.getFloat(i, 0)));
+        }
+        items_images.recycle();
+
+        iadapter.notifyDataSetChanged();
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu, menu);
