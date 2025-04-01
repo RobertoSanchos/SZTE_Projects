@@ -8,11 +8,5 @@
     android:layout_height="match_parent"
     tools:context=".Home_activity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/home_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="vertical"
-        />
-    
+
 </androidx.constraintlayout.widget.ConstraintLayout>
