@@ -3,27 +3,20 @@ package hu.techbazaar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.TotpSecret;
 
-public class Reg extends AppCompatActivity {
+public class Reg_activity extends AppCompatActivity {
     private static final int SK = 34788;
     EditText new_username, email, password_1, password_2;
     CheckBox ch_1, ch_2;
@@ -76,10 +69,10 @@ public class Reg extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        Toast.makeText(Reg.this, "Sikeres regisztráció!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Reg_activity.this, "Sikeres regisztráció!", Toast.LENGTH_SHORT).show();
                         home();
                     } else {
-                        Toast.makeText(Reg.this, "Sikertelen regisztráció: "
+                        Toast.makeText(Reg_activity.this, "Sikertelen regisztráció: "
                                 + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }
@@ -90,7 +83,7 @@ public class Reg extends AppCompatActivity {
     public void ignore(View view) {finish();}
 
     private void home(){
-        Intent home_intent = new Intent(this, Home.class);
+        Intent home_intent = new Intent(this, Home_activity.class);
         startActivity(home_intent);
     }
 }

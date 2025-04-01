@@ -1,12 +1,12 @@
 package hu.techbazaar;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -19,14 +19,15 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class Start extends AppCompatActivity {
+public class Start_activity extends AppCompatActivity {
     private static final int SK = 34788;
 
     EditText login_email, password;
-
-    private ProgressDialog load;
+    CheckBox remember_check;
 
     private FirebaseAuth Main_Auth;
+
+    SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,18 +36,48 @@ public class Start extends AppCompatActivity {
 
         login_email = findViewById(R.id.login_email);
         password = findViewById(R.id.password);
+        remember_check = findViewById(R.id.remember_check);
+
         Main_Auth = FirebaseAuth.getInstance();
 
-        //load = new ProgressDialog(this);
+        sp = getSharedPreferences("RUsers", MODE_PRIVATE);
+        loadSavedC();
     }
 
+    private void saveC(String email, String password){
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putString("email", email);
+        editor.putString("password", password);
+        editor.putBoolean("remember_me", true);
+        editor.apply();
+    }
+
+    private void loadSavedC() {
+        boolean isRemembered = sp.getBoolean("remember_me", false);
+        if(isRemembered){
+            login_email.setText(sp.getString("email",""));
+            password.setText(sp.getString("password",""));
+            remember_check.setChecked(true);
+        }
+    }
+
+    private void clearC(){
+        SharedPreferences.Editor editor = sp.edit();
+        editor.remove("email");
+        editor.remove("password");
+        editor.remove("remember_me");
+        editor.apply();
+    }
+
+
     public void register(View view) {
-        Intent reg_intent = new Intent(this, Reg.class);
+        Intent reg_intent = new Intent(this, Reg_activity.class);
         reg_intent.putExtra("SK", SK);
         startActivity(reg_intent);
     }
     private void home(){
-        Intent home_intent = new Intent(this, Home.class);
+        Intent home_intent = new Intent(this, Home_activity.class);
+        home_intent.putExtra("SK", SK);
         startActivity(home_intent);
     }
 
@@ -63,14 +94,16 @@ public class Start extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        Toast.makeText(Start.this, "Sikeres bejelentkezés!", Toast.LENGTH_SHORT).show();
-                       // load.setTitle("Sikeres bejelentkezés");
-                       // load.setMessage("Rögtön továbbítunk!");
-                       // load.setCanceledOnTouchOutside(false);
-                       // load.show();
+                        if(remember_check.isChecked()){
+                            saveC(email, jelszo);
+                        }
+                        else {
+                            clearC();
+                        }
+                        Toast.makeText(Start_activity.this, "Sikeres bejelentkezés!", Toast.LENGTH_SHORT).show();
                         home();
                     } else {
-                        Toast.makeText(Start.this, "Sikertelen belépés: "
+                        Toast.makeText(Start_activity.this, "Sikertelen belépés: "
                                 + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }
@@ -84,9 +117,10 @@ public class Start extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
+                    Toast.makeText(Start_activity.this, "Sikeres bejelentkezés!", Toast.LENGTH_SHORT).show();
                     home();
                 } else {
-                    Toast.makeText(Start.this, "Sikertelen belépés: "
+                    Toast.makeText(Start_activity.this, "Sikertelen belépés: "
                             + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
             }

@@ -13,13 +13,13 @@
         android:theme="@style/Base.Theme.TechBazaar"
         tools:targetApi="31">
         <activity
-            android:name=".Home"
+            android:name=".Home_activity"
             android:exported="false" />
         <activity
-            android:name=".Reg"
+            android:name=".Reg_activity"
             android:exported="false" />
         <activity
-            android:name=".Start"
+            android:name=".Start_activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
