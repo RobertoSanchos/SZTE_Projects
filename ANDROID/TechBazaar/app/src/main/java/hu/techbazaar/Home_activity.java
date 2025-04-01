@@ -6,20 +6,22 @@ import android.view.MenuItem;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.ArrayList;
+
 public class Home_activity extends AppCompatActivity {
+    private RecyclerView home_view;
+    private ArrayList<items> home_items;
+    private HomeAdapter iadapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        int sk = getIntent().getIntExtra("SK", 0);
-        if(sk != 34788){
-            finish();
-        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

@@ -20,6 +20,4 @@ public class items {
     public float getPrice() {return price;}
     public float getRate() {return rate;}
     public int getImgsrc() {return imgsrc;}
-
-
 }

@@ -77,7 +77,6 @@ public class Start_activity extends AppCompatActivity {
     }
     private void home(){
         Intent home_intent = new Intent(this, Home_activity.class);
-        home_intent.putExtra("SK", SK);
         startActivity(home_intent);
     }
 
