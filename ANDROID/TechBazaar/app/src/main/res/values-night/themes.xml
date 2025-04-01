@@ -1,5 +1,12 @@
 <resources>
-    <style name="Base.Theme.TechBazaar" parent="Theme.MaterialComponents.DayNight">
-        <item name="colorPrimary">#2C5078</item>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TechBazaar" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryc</item>
+        <item name="colorSecondary">@color/secondaryc</item>
+        <item name="android:colorBackground">#FFFFFF</item>
+    </style>
+    <!-- Parent application theme. -->
+    <style name="Theme.TechBazaar" parent="Base.Theme.TechBazaar">
+
     </style>
 </resources>

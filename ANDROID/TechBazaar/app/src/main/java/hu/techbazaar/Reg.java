@@ -2,6 +2,7 @@ package hu.techbazaar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
@@ -20,16 +21,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.TotpSecret;
 
 public class Reg extends AppCompatActivity {
     private static final int SK = 34788;
-    EditText new_username;
-    EditText email;
-    EditText password_1;
-    EditText password_2;
-    CheckBox ch_1;
-    CheckBox ch_2;
-    TextView ch;
+    EditText new_username, email, password_1, password_2;
+    CheckBox ch_1, ch_2;
 
     private FirebaseAuth first_Auth;
 
@@ -49,13 +46,9 @@ public class Reg extends AppCompatActivity {
         password_2 = findViewById(R.id.password_2);
         ch_1 = findViewById(R.id.checkBox1);
         ch_2 = findViewById(R.id.checkBox2);
-        ch = findViewById(R.id.icheck);
 
         first_Auth = FirebaseAuth.getInstance();
 
-//        if (getSupportActionBar() != null) {
-//            getSupportActionBar().hide();
-//        }
     }
 
     public void register(View view) {
@@ -66,14 +59,24 @@ public class Reg extends AppCompatActivity {
         boolean cs1 = ch_1.isChecked();
         boolean cs2 = ch_2.isChecked();
 
-        if (!p1.equals(p2)) ch.setText("Nem egyeznek a jelszók!");
-        else if (!cs1 || !cs2) ch.setText("Nem fogadtad el a szükséges feltételeket!");
-        else if (p1.length() < 6) ch.setText("A jelszónak legalább 6 karakternek kell lennie!");
+        if (TextUtils.isEmpty(username))
+            Toast.makeText(this, "Nem adtál meg felhasználónevet!", Toast.LENGTH_SHORT).show();
+        else if (TextUtils.isEmpty(p1))
+            Toast.makeText(this, "Nem adtál meg jelszót!", Toast.LENGTH_SHORT).show();
+        else if (TextUtils.isEmpty(email_address))
+            Toast.makeText(this, "Nem adtál meg email címet!", Toast.LENGTH_SHORT).show();
+        else if (!p1.equals(p2))
+            Toast.makeText(this, "Nem egyeznek a jelszók!", Toast.LENGTH_SHORT).show();
+        else if (p1.length() < 6)
+            Toast.makeText(this, "A jelszónak legalább 6 karakter hosszúnak kell lennie!", Toast.LENGTH_SHORT).show();
+        else if (!cs1 || !cs2)
+            Toast.makeText(this, "Nem fogadtad el a feltételeket!", Toast.LENGTH_SHORT).show();
         else {
             first_Auth.createUserWithEmailAndPassword(email_address, p1).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
+                        Toast.makeText(Reg.this, "Sikeres regisztráció!", Toast.LENGTH_SHORT).show();
                         home();
                     } else {
                         Toast.makeText(Reg.this, "Sikertelen regisztráció: "

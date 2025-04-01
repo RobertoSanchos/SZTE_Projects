@@ -5,7 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="20dp">
+    android:layout_marginBottom="20dp"
+    android:background="#FFFFFF">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -33,7 +34,7 @@
         android:ems="14"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:textColor="#2C5078"
+        android:textColor="@color/primaryc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
@@ -44,14 +45,41 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="14"
-        android:inputType="textPassword"
         android:hint="@string/password"
-        android:textColor="#2C5078"
+        android:inputType="textPassword"
+        android:textColor="@color/primaryc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_email"
         app:layout_constraintVertical_bias="0.100"
         tools:layout_editor_absoluteX="0dp" />
-
+    <LinearLayout
+        android:id="@+id/checkl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        >
+        <CheckBox
+            android:id="@+id/c1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jelszó megjegyzése"
+            android:textColor="@color/primaryc"
+            android:buttonTint="@color/primaryc"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/c2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elfelejtetted a jelszót?"
+            android:layout_marginStart="40dp"
+            android:textSize="14sp"
+            android:textColor="@color/primaryc"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
     <Button
         android:id="@+id/login"
         android:layout_width="250dp"
@@ -63,8 +91,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.123" />
+        app:layout_constraintTop_toBottomOf="@+id/checkl"
+        app:layout_constraintVertical_bias="0.05" />
 
     <Button
         android:id="@+id/regist"
@@ -91,20 +119,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login" />
 
-    <TextView
-        android:id="@+id/icheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text=""
-        android:textAlignment="center"
-        android:textColor="#8A1D1D"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regist" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

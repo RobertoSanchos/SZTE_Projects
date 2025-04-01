@@ -1,10 +1,13 @@
 package hu.techbazaar;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -19,9 +22,9 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Start extends AppCompatActivity {
     private static final int SK = 34788;
 
-    EditText login_email;
-    EditText password;
-    TextView ch;
+    EditText login_email, password;
+
+    private ProgressDialog load;
 
     private FirebaseAuth Main_Auth;
 
@@ -32,12 +35,9 @@ public class Start extends AppCompatActivity {
 
         login_email = findViewById(R.id.login_email);
         password = findViewById(R.id.password);
-        ch = findViewById(R.id.icheck);
         Main_Auth = FirebaseAuth.getInstance();
 
-//        if (getSupportActionBar() != null) {
-//            getSupportActionBar().hide();
-//        }
+        //load = new ProgressDialog(this);
     }
 
     public void register(View view) {
@@ -54,19 +54,29 @@ public class Start extends AppCompatActivity {
         String email = login_email.getText().toString();
         String jelszo = password.getText().toString();
 
-        if(!email.isEmpty() && !jelszo.isEmpty()) {
+        if(TextUtils.isEmpty(email))
+            Toast.makeText(this, "Nem adtad meg az email címed!", Toast.LENGTH_SHORT).show();
+        else if(TextUtils.isEmpty(jelszo))
+            Toast.makeText(this, "Nem adtad meg a jelszódat!", Toast.LENGTH_SHORT).show();
+        else {
             Main_Auth.signInWithEmailAndPassword(email, jelszo).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
+                        Toast.makeText(Start.this, "Sikeres bejelentkezés!", Toast.LENGTH_SHORT).show();
+                       // load.setTitle("Sikeres bejelentkezés");
+                       // load.setMessage("Rögtön továbbítunk!");
+                       // load.setCanceledOnTouchOutside(false);
+                       // load.show();
                         home();
                     } else {
-                        ch.setText(R.string.fail_sign_in);
+                        Toast.makeText(Start.this, "Sikertelen belépés: "
+                                + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }
             });
         }
-        else{ch.setText(R.string.Missing_field);}
+
     }
 
     public void signInWithGuest(View view) {
@@ -76,13 +86,10 @@ public class Start extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     home();
                 } else {
-                    ch.setText(R.string.fail_sign_in);
+                    Toast.makeText(Start.this, "Sikertelen belépés: "
+                            + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
-
-
-
-
 }

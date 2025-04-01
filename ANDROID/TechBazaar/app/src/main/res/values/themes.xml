@@ -2,7 +2,6 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.TechBazaar" parent="Theme.Material3.DayNight.NoActionBar">
          <item name="colorPrimary">@color/primaryc</item>
-         <item name="colorSecondary">@color/secondaryc</item>
     </style>
     <!-- Parent application theme. -->
     <style name="Theme.TechBazaar" parent="Base.Theme.TechBazaar" />
