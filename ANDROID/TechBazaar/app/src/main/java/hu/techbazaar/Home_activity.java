@@ -6,6 +6,7 @@ import android.view.MenuItem;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -20,6 +21,8 @@ public class Home_activity extends AppCompatActivity {
         if(sk != 34788){
             finish();
         }
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
