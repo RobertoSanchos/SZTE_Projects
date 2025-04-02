@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -37,7 +38,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductViewHol
         holder.name.setText(product.getName());
         holder.price.setText(product.getPrice());
         holder.description.setText(product.getDesc());
-
+        holder.rate.setRating(product.getRate());
         Glide.with(context).load(product.getImgsrc()).into(holder.imageView);
     }
 
@@ -49,6 +50,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductViewHol
     static class ProductViewHolder extends RecyclerView.ViewHolder {
         TextView name, price, description;
         ImageView imageView;
+        RatingBar rate;
 
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -56,6 +58,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductViewHol
             price = itemView.findViewById(R.id.item_price);
             description = itemView.findViewById(R.id.item_description);
             imageView = itemView.findViewById(R.id.item_img);
+            rate = itemView.findViewById(R.id.item_rate);
         }
     }
 }

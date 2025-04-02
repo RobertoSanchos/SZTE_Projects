@@ -45,12 +45,14 @@
             android:text=""
             android:textStyle="bold"
             android:textColor="@color/primaryc" />
+
         <RatingBar
             android:id="@+id/item_rate"
-            style="@android:style/Widget.Holo.Light.RatingBar.Small"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:isIndicator="true" />
+            android:isIndicator="true"
+            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

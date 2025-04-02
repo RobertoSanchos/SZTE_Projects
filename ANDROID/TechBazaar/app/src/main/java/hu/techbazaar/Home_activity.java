@@ -4,6 +4,9 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +22,7 @@ public class Home_activity extends AppCompatActivity {
     private RecyclerView home_view;
     private ArrayList<items> home_items;
     private HomeAdapter iadapter;
+    private TextView highlighted;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,10 @@ public class Home_activity extends AppCompatActivity {
 
         iadapter = new HomeAdapter(this, home_items);
         home_view.setAdapter(iadapter);
+
+        highlighted = findViewById(R.id.highlighted);
+        Animation slideIn = AnimationUtils.loadAnimation(this, R.anim.slide);
+        highlighted.startAnimation(slideIn);
 
     }
 
