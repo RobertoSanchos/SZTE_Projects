@@ -4,121 +4,58 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import java.util.List;
 
-import java.util.ArrayList;
+import hu.techbazaar.items;
 
-public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.VH> implements Filterable {
-    private ArrayList<items> items;
-    private ArrayList<items> items_filter;
-    private Context con;
-    private int LP = -1;
+public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductViewHolder> {
+    private Context context;
+    private List<items> productList;
 
-    public HomeAdapter(Context con, ArrayList<items> items) {
-        this.items = items;
-        this.items_filter = items;
-        this.con = con;
+    public HomeAdapter(Context context, List<items> productList) {
+        this.context = context;
+        this.productList = productList;
+    }
+
+    @NonNull
+    @Override
+    public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.home_items, parent, false);
+        return new ProductViewHolder(view);
     }
 
     @Override
-    public VH onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new VH(LayoutInflater.from(con)
-                .inflate(R.layout.home_items, parent, false));
-    }
+    public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
+        items product = productList.get(position);
+        holder.name.setText(product.getName());
+        holder.price.setText(product.getPrice());
+        holder.description.setText(product.getDesc());
 
-    @Override
-    public void onBindViewHolder(HomeAdapter.VH holder, int position) {
-        items citem = items.get(position);
-
-        holder.bindTo(citem);
-
-        if(holder.getAdapterPosition() > position){
-            Animation ani = AnimationUtils.loadAnimation(con, R.anim.slide_left_to_right);
-            holder.itemView.startAnimation(ani);
-            position = holder.getAdapterPosition();
-        }
-
+        Glide.with(context).load(product.getImgsrc()).into(holder.imageView);
     }
 
     @Override
     public int getItemCount() {
-        return items.size();
+        return productList.size();
     }
 
-    @Override
-    public Filter getFilter() {return web_shop_filter;}
+    static class ProductViewHolder extends RecyclerView.ViewHolder {
+        TextView name, price, description;
+        ImageView imageView;
 
-    private Filter web_shop_filter = new Filter() {
-        @Override
-        protected FilterResults performFiltering(CharSequence constraint) {
-            ArrayList<items> filter_list = new ArrayList<>();
-            FilterResults results = new FilterResults();
-
-            if(constraint == null || constraint.length() == 0){
-                results.count = items.size();
-                results.values = items;
-            }
-            else {
-                String ch_pattern = constraint.toString().toLowerCase().trim();
-
-                for(hu.techbazaar.items item : items){
-                    if(item.getName().toLowerCase().contains(ch_pattern)){
-                        filter_list.add(item);
-                    }
-                }
-
-                results.count = filter_list.size();
-                results.values = filter_list;
-            }
-
-            return results;
-        }
-
-        @Override
-        protected void publishResults(CharSequence constraint, FilterResults results) {
-            items = (ArrayList) results.values;
-            notifyDataSetChanged();
-        }
-    };
-    public class VH extends RecyclerView.ViewHolder{
-        private TextView name, desc, price;
-        private ImageView img;
-        private RatingBar rate;
-
-        public VH(View itemView) {
+        public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
-
             name = itemView.findViewById(R.id.item_name);
-            desc = itemView.findViewById(R.id.item_description);
             price = itemView.findViewById(R.id.item_price);
-            img = itemView.findViewById(R.id.item_img);
-            rate = itemView.findViewById(R.id.item_rate);
-
-            itemView.findViewById(R.id.cart).setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View v) {
-
-                }
-            });
-        }
-
-        public void bindTo(hu.techbazaar.items citem) {
-            name.setText(citem.getName());
-            desc.setText(citem.getDesc());
-            price.setText(citem.getPrice());
-            rate.setRating(citem.getRate());
-            Glide.with(con).load(citem.getImgsrc()).into(img);
-
+            description = itemView.findViewById(R.id.item_description);
+            imageView = itemView.findViewById(R.id.item_img);
         }
     }
 }
