@@ -30,13 +30,13 @@
 
     <string-array name="items_description">
         <item>Órajele: 2,9 GHz \nFoglalat: Intel 1200\nMagok száma: 6\nMax. teljesítmény: 4,3 GHz...</item>
-        <item>Órajele: 2,7 GHz Foglalat: Intel 1700 Magok száma: 12 Max. teljesítmény: 5 GHz...</item>
-        <item>CPU Foglalat: AM4 Chipset: AMD B550 Memória típusa: DDR4 Max. memória mérete: 128 GB...</item>
-        <item>CPU Foglalat: AM4 Chipset: AMD B450 Memória típusa: DDR4 Max. memória mérete: 64 GB...</item>
-        <item>Kialakítás: 2,5 inch Kapacitás: 500 GB Maximális olvasási sebesség: 560 MB/s Maximális írási sebesség: 530 MB/s...</item>
-        <item>Kialakítás: 2,5 inch Kapacitás: 1000 GB Maximális olvasási sebesség: 550 MB/s Maximális írási sebesség: 530 MB/s...</item>
-        <item>Típus: MidiTower Szélesség: 251 mm Magasság: 559 mm Mélység: 528 mm Tömeg 17080 g...</item>
-        <item>Típus: MidiTower Szélesség: 248 mm Magasság: 546 mm Mélység: 544 mm Tömeg 14200 g...</item>
+        <item>Órajele: 2,7 GHz \nFoglalat: Intel 1700 \nMagok száma: 12\nMax. teljesítmény: 5 GHz...</item>
+        <item>CPU Foglalat: AM4 \nChipset: AMD B550 \nMemória típusa: DDR4 \nMax. memória mérete: 128 GB...</item>
+        <item>\nCPU Foglalat: AM4 \nChipset: AMD B450 \nMemória típusa: DDR4 \nMax. memória mérete: 64 GB...</item>
+        <item>Kialakítás: 2,5 inch \nKapacitás: 500 GB \nMaximális olvasási sebesség: 560 MB/s \nMaximális írási sebesség: 530 MB/s...</item>
+        <item>Kialakítás: 2,5 inch \nKapacitás: 1000 GB \nMaximális olvasási sebesség: 550 MB/s \nMaximális írási sebesség: 530 MB/s...</item>
+        <item>Típus: MidiTower \nSzélesség: 251 mm \nMagasság: 559 mm \nMélység: 528 mm Tömeg 17080 g...</item>
+        <item>Típus: MidiTower \nSzélesség: 248 mm \nMagasság: 546 mm \nMélység: 544 mm Tömeg 14200 g...</item>
     </string-array>
 
 <array name="items_images">
