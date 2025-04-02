@@ -90,7 +90,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.VH> implements
             notifyDataSetChanged();
         }
     };
-    class VH extends RecyclerView.ViewHolder{
+    public class VH extends RecyclerView.ViewHolder{
         private TextView name, desc, price;
         private ImageView img;
         private RatingBar rate;

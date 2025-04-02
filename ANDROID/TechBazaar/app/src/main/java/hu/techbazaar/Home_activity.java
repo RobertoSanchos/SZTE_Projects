@@ -30,11 +30,11 @@ public class Home_activity extends AppCompatActivity {
         iadapter = new HomeAdapter(this, home_items);
         home_view.setAdapter(iadapter);
 
-        idata();
+        load_data();
 
     }
 
-    private void idata() {
+    private void load_data() {
         String[] items_name = getResources().getStringArray(R.array.items_names);
         String[] items_description = getResources().getStringArray(R.array.items_description);
         String[] items_price = getResources().getStringArray(R.array.items_prices);
