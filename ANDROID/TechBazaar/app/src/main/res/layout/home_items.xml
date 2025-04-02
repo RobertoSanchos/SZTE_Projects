@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="5dp"
+    android:paddingBottom="5dp"
     >
     <LinearLayout
         android:id="@+id/item_cont"
@@ -14,8 +15,12 @@
             android:id="@+id/item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="5dp"
             android:text=""
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:textStyle="bold"
+            android:gravity="center"
             android:textColor="@color/primaryc" />
         <ImageView
             android:id="@+id/item_img"
@@ -27,41 +32,46 @@
             android:id="@+id/item_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:text=""
             android:textColor="@color/primaryc" />
-
         <TextView
             android:id="@+id/item_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:text=""
+            android:textStyle="bold"
             android:textColor="@color/primaryc" />
-
+        <RatingBar
+            android:id="@+id/item_rate"
+            style="@android:style/Widget.Holo.Light.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RatingBar
-                android:id="@+id/item_rate"
-                style="@android:style/Widget.DeviceDefault.RatingBar.Indicator"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginVertical="5dp">
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:isIndicator="true" />
-
+                android:src="@drawable/shopping_cart"
+                android:background="@drawable/rounded_button"
+                android:padding="5dp"
+                />
             <ImageButton
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="80dp"
-                android:src="@drawable/shopping_cart" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/favorite" />
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:src="@drawable/favorite"
+                android:layout_marginStart="5dp"
+                android:padding="5dp"
+                />
         </LinearLayout>
     </LinearLayout>
 

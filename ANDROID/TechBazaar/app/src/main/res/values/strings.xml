@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TechBazaar Webshop</string>
+    <string name="app_name">TechBazaar</string>
     <string name="username">Felhasználónév</string>
     <string name="password">Jelszó</string>
     <string name="login">Bejelentkezés</string>
@@ -18,25 +18,25 @@
     <string name="favorite">Kedvencek</string>
 
     <string-array name="items_names">
-    <item>Core i5-10400F</item>
-    <item>Core i7-12700K</item>
-    <item>Asus ROG STRIX B550-F GAMING</item>
-    <item>ASRock B450 Pro4</item>
-    <item>SSD 2.5" Samsung 870 Evo 500GB</item>
-    <item>Kingston SSDNow KC400 1 TB</item>
-    <item>CORSAIR iCUE 5000T RGB TG fekete</item>
-    <item>Cooler Master MasterCase H500M</item>
+    <item>Core i5-10400F \n</item>
+    <item>Core i7-12700K\n</item>
+    <item>Asus ROG STRIX B550-F GAMING\n</item>
+    <item>ASRock B450 Pro4\n</item>
+    <item>SSD 2.5" Samsung 870 Evo 500GB\n</item>
+    <item>Kingston SSDNow KC400 1 TB\n</item>
+    <item>CORSAIR iCUE 5000T RGB TG fekete\n</item>
+    <item>Cooler Master MasterCase H500M\n</item>
 </string-array>
 
     <string-array name="items_description">
-        <item>Órajele: 2,9 GHz | Foglalat: Intel 1200 | Magok száma: 6 | Max. teljesítmény: 4,3 GHz</item>
-        <item>Órajele: 2,7 GHz | Foglalat: Intel 1700 | Magok száma: 12 | Max. teljesítmény: 5 GHz</item>
-        <item>CPU Foglalat: AM4 | Chipset: AMD B550 | Memória típusa: DDR4 | Max. memória mérete: 128 GB</item>
-        <item>CPU Foglalat: AM4 | Chipset: AMD B450 | Memória típusa: DDR4 | Max. memória mérete: 64 GB</item>
-        <item>Kialakítás: 2,5 inch | Kapacitás: 500 GB | Maximális olvasási sebesség: 560 MB/s | Maximális írási sebesség: 530 MB/s</item>
-        <item>Kialakítás: 2,5 inch | Kapacitás: 1000 GB | Maximális olvasási sebesség: 550 MB/s | Maximális írási sebesség: 530 MB/s</item>
-        <item>Típus: MidiTower | Szélesség: 251 mm | Magasság: 559 mm | Mélység: 528 mm | Tömeg 17080 g</item>
-        <item>Típus: MidiTower | Szélesség: 248 mm | Magasság: 546 mm | Mélység: 544 mm | Tömeg 14200 g</item>
+        <item>Órajele: 2,9 GHz \nFoglalat: Intel 1200\nMagok száma: 6\nMax. teljesítmény: 4,3 GHz...</item>
+        <item>Órajele: 2,7 GHz Foglalat: Intel 1700 Magok száma: 12 Max. teljesítmény: 5 GHz...</item>
+        <item>CPU Foglalat: AM4 Chipset: AMD B550 Memória típusa: DDR4 Max. memória mérete: 128 GB...</item>
+        <item>CPU Foglalat: AM4 Chipset: AMD B450 Memória típusa: DDR4 Max. memória mérete: 64 GB...</item>
+        <item>Kialakítás: 2,5 inch Kapacitás: 500 GB Maximális olvasási sebesség: 560 MB/s Maximális írási sebesség: 530 MB/s...</item>
+        <item>Kialakítás: 2,5 inch Kapacitás: 1000 GB Maximális olvasási sebesség: 550 MB/s Maximális írási sebesség: 530 MB/s...</item>
+        <item>Típus: MidiTower Szélesség: 251 mm Magasság: 559 mm Mélység: 528 mm Tömeg 17080 g...</item>
+        <item>Típus: MidiTower Szélesség: 248 mm Magasság: 546 mm Mélység: 544 mm Tömeg 14200 g...</item>
     </string-array>
 
 <array name="items_images">

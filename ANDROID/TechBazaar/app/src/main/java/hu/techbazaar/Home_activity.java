@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
@@ -24,13 +25,15 @@ public class Home_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        setSupportActionBar(findViewById(R.id.toolbar));
         home_view = findViewById(R.id.home_content);
         home_view.setLayoutManager(new GridLayoutManager(this, 2));
+
         home_items = new ArrayList<>();
+        load_data();
+
         iadapter = new HomeAdapter(this, home_items);
         home_view.setAdapter(iadapter);
-
-        load_data();
 
     }
 
@@ -49,7 +52,6 @@ public class Home_activity extends AppCompatActivity {
         }
         items_images.recycle();
 
-        iadapter.notifyDataSetChanged();
     }
 
     @Override

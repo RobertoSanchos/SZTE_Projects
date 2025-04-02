@@ -14,16 +14,17 @@
         android:background="?attr/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TechBazaar"
-            android:textSize="20sp"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"/>
     </androidx.appcompat.widget.Toolbar>
-
+<TextView
+    android:id="@+id/highlighted"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Kiemelt ajánlataink"
+    android:textSize="24sp"
+    android:textColor="@color/red"
+    android:textStyle="bold"
+    android:gravity="center"
+    />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/home_content"
         android:layout_width="match_parent"
