@@ -16,6 +16,8 @@
     <string name="exit">Kijelentkezés</string>
     <string name="notification">Értesítések</string>
     <string name="favorite">Kedvencek</string>
+    <string name="remember_password">Jelszó megjegyzése</string>
+    <string name="login_with_guest">Lépj be vendégként</string>
 
     <string-array name="items_names">
     <item>Core i5-10400F \n</item>
