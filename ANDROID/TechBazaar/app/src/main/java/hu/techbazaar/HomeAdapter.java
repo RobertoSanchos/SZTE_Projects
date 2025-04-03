@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import java.util.List;
 
-import hu.techbazaar.items;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductViewHolder> {
     private Context context;
@@ -28,12 +27,14 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductViewHol
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // Megjelenés kölcsönzése a soroknak
         View view = LayoutInflater.from(context).inflate(R.layout.home_items, parent, false);
         return new ProductViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
+        // Ertékek hozzárendelése az Recycle view fájlban létrehozott nézetekhez
         items product = productList.get(position);
         holder.name.setText(product.getName());
         holder.price.setText(product.getPrice());
@@ -44,10 +45,12 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductViewHol
 
     @Override
     public int getItemCount() {
+        // A megjelenített termékek számának megadása
         return productList.size();
     }
 
-    static class ProductViewHolder extends RecyclerView.ViewHolder {
+    public static class ProductViewHolder extends RecyclerView.ViewHolder {
+        // Nézetek beállítása
         TextView name, price, description;
         ImageView imageView;
         RatingBar rate;
