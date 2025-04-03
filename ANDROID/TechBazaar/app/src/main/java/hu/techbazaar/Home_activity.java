@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -78,6 +79,7 @@ public class Home_activity extends AppCompatActivity {
             finish();
             Intent Start_intent = new Intent(this, Start_activity.class);
             startActivity(Start_intent);
+            Toast.makeText(Home_activity.this, "Kijelentkezve!", Toast.LENGTH_SHORT).show();
             return true;
         }
         else return super.onOptionsItemSelected(item);
