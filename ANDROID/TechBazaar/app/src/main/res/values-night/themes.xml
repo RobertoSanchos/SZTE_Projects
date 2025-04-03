@@ -1,12 +1,11 @@
 <resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.TechBazaar" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/primaryc</item>
-        <item name="colorSecondary">@color/secondaryc</item>
-        <item name="android:colorBackground">#FFFFFF</item>
-    </style>
-    <!-- Parent application theme. -->
-    <style name="Theme.TechBazaar" parent="Base.Theme.TechBazaar">
-
+    <item name="colorPrimary">@color/primaryc</item>
+    <item name="colorOnPrimary">@color/white</item>
+    <!--        Fő háttérszín-->
+    <item name="android:colorBackground">@color/white</item>
+    <!--        Tippek színe-->
+    <item name="android:textColorHint">@color/darkhint</item>
     </style>
 </resources>
