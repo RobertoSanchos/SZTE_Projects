@@ -9,5 +9,5 @@
         </shape>
     </item>
 
-    <item android:drawable="@drawable/check" android:gravity="center"/>
+    <item android:drawable="@drawable/check_icon" android:gravity="center"/>
 </layer-list>
