@@ -54,10 +54,10 @@ public class Reg_activity extends AppCompatActivity {
 
         if (TextUtils.isEmpty(username))
             Toast.makeText(this, "Nem adtál meg felhasználónevet!", Toast.LENGTH_SHORT).show();
-        else if (TextUtils.isEmpty(p1))
-            Toast.makeText(this, "Nem adtál meg jelszót!", Toast.LENGTH_SHORT).show();
         else if (TextUtils.isEmpty(email_address))
             Toast.makeText(this, "Nem adtál meg email címet!", Toast.LENGTH_SHORT).show();
+        else if (TextUtils.isEmpty(p1))
+            Toast.makeText(this, "Nem adtál meg jelszót!", Toast.LENGTH_SHORT).show();
         else if (!p1.equals(p2))
             Toast.makeText(this, "Nem egyeznek a jelszók!", Toast.LENGTH_SHORT).show();
         else if (p1.length() < 6)
