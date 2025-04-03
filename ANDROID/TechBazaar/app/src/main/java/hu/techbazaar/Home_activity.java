@@ -1,5 +1,6 @@
 package hu.techbazaar;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.Menu;
@@ -74,7 +75,8 @@ public class Home_activity extends AppCompatActivity {
         else if (item.getItemId() == R.id.fav) return true;
         else if (item.getItemId() == R.id.logout) {
             FirebaseAuth.getInstance().signOut();
-            finish();
+            Intent Start_intent = new Intent(this, Start_activity.class);
+            startActivity(Start_intent);
             return true;
         }
         else return super.onOptionsItemSelected(item);
