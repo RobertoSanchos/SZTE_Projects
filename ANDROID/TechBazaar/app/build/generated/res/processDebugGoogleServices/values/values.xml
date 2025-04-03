@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">623394693372-djq43og4b1pht2c1eqso8bt6klf9jtj2.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">623394693372</string>
+    <string name="google_api_key" translatable="false">AIzaSyCMcLuFELIGKwN2vmiKdCFFaX7RTS0HxWU</string>
+    <string name="google_app_id" translatable="false">1:623394693372:android:266e8660b9edbe8da33779</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCMcLuFELIGKwN2vmiKdCFFaX7RTS0HxWU</string>
+    <string name="google_storage_bucket" translatable="false">techbazaar-7d519.firebasestorage.app</string>
+    <string name="project_id" translatable="false">techbazaar-7d519</string>
+</resources>

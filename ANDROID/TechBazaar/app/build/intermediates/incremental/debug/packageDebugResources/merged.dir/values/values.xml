@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="items_description">
+        <item>Órajele: 2,9 GHz \nFoglalat: Intel 1200\nMagok száma: 6\nMax. teljesítmény: 4,3 GHz...</item>
+        <item>Órajele: 2,7 GHz \nFoglalat: Intel 1700 \nMagok száma: 12\nMax. teljesítmény: 5 GHz...</item>
+        <item>CPU Foglalat: AM4 \nChipset: AMD B550 \nMemória típusa: DDR4 \nMax. memória mérete: 128 GB...</item>
+        <item>\nCPU Foglalat: AM4 \nChipset: AMD B450 \nMemória típusa: DDR4 \nMax. memória mérete: 64 GB...</item>
+        <item>Kialakítás: 2,5 inch \nKapacitás: 500 GB \nMaximális olvasási sebesség: 560 MB/s \nMaximális írási sebesség: 530 MB/s...</item>
+        <item>Kialakítás: 2,5 inch \nKapacitás: 1000 GB \nMaximális olvasási sebesség: 550 MB/s \nMaximális írási sebesség: 530 MB/s...</item>
+        <item>Típus: MidiTower \nSzélesség: 251 mm \nMagasság: 559 mm \nMélység: 528 mm Tömeg 17080 g...</item>
+        <item>Típus: MidiTower \nSzélesség: 248 mm \nMagasság: 546 mm \nMélység: 544 mm Tömeg 14200 g...</item>
+    </string-array>
+    <array name="items_images">
+    <item>@drawable/i5_10400f</item>
+    <item>@drawable/i7_12700k</item>
+    <item>@drawable/asus_b550f</item>
+    <item>@drawable/asrock_b450_pro4</item>
+    <item>@drawable/samsung_870_evo</item>
+    <item>@drawable/kingstone_kc_400</item>
+    <item>@drawable/corsair_case</item>
+    <item>@drawable/cooler_master_case</item>
+
+</array>
+    <string-array name="items_names">
+    <item>Core i5-10400F \n</item>
+    <item>Core i7-12700K\n</item>
+    <item>Asus ROG STRIX B550-F GAMING\n</item>
+    <item>ASRock B450 Pro4\n</item>
+    <item>SSD 2.5" Samsung 870 Evo 500GB\n</item>
+    <item>Kingston SSDNow KC400 1 TB\n</item>
+    <item>CORSAIR iCUE 5000T RGB TG fekete\n</item>
+    <item>Cooler Master MasterCase H500M\n</item>
+</string-array>
+    <array name="items_prices">
+        <item>45 224 Ft</item>
+        <item>122 443 Ft</item>
+        <item>39 333 Ft</item>
+        <item>29 122 Ft</item>
+        <item>18 566 Ft</item>
+        <item>27 688 Ft</item>
+        <item>88 655 Ft</item>
+        <item>64 442 Ft</item>
+    </array>
+    <array name="items_rates">
+        <item>3</item>
+        <item>3.5</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>5</item>
+        <item>4</item>
+        <item>3.5</item>
+        <item>3.5</item>
+    </array>
+    <color name="black">#FF000000</color>
+    <color name="primaryc">#2C5078</color>
+    <color name="red">#FF0000</color>
+    <color name="secondaryc">#e54f00</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="Missing_field">Töltsd ki az összes mezőt!</string>
+    <string name="app_name">TechBazaar</string>
+    <string name="back">Mégse</string>
+    <string name="cart">Bevásárlókosár</string>
+    <string name="default_web_client_id" translatable="false">623394693372-djq43og4b1pht2c1eqso8bt6klf9jtj2.apps.googleusercontent.com</string>
+    <string name="email">E-mail cím</string>
+    <string name="exit">Kijelentkezés</string>
+    <string name="fail_sign_in">Sikertelen belépés!</string>
+    <string name="favorite">Kedvencek</string>
+    <string name="gcm_defaultSenderId" translatable="false">623394693372</string>
+    <string name="google_api_key" translatable="false">AIzaSyCMcLuFELIGKwN2vmiKdCFFaX7RTS0HxWU</string>
+    <string name="google_app_id" translatable="false">1:623394693372:android:266e8660b9edbe8da33779</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCMcLuFELIGKwN2vmiKdCFFaX7RTS0HxWU</string>
+    <string name="google_storage_bucket" translatable="false">techbazaar-7d519.firebasestorage.app</string>
+    <string name="login">Bejelentkezés</string>
+    <string name="logo">tb_logo</string>
+    <string name="notification">Értesítések</string>
+    <string name="password">Jelszó</string>
+    <string name="password_again">Jelszó újra</string>
+    <string name="project_id" translatable="false">techbazaar-7d519</string>
+    <string name="regist">Regisztráció</string>
+    <string name="search">Keresés</string>
+    <string name="settings">Beállítások</string>
+    <string name="username">Felhasználónév</string>
+    <style name="Base.Theme.TechBazaar" parent="Theme.Material3.DayNight.NoActionBar">
+         <item name="colorPrimary">@color/primaryc</item>
+    </style>
+    <style name="Theme.TechBazaar" parent="Base.Theme.TechBazaar"/>
+</resources>

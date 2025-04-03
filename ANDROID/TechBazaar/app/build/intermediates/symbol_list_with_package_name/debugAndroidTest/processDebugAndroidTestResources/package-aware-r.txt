@@ -1,0 +1,3 @@
+hu.techbazaar.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

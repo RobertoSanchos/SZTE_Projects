@@ -1,0 +1,5 @@
+hu.techbazaar.test.app-core-1.6.1-0 C:\Users\rober\.gradle\caches\8.11.1\transforms\9903d24c422b341648224cc643756a9b\transformed\core-1.6.1\res
+hu.techbazaar.test.app-androidTest-1 D:\FONTOSSSS\SULI\EGYETEM\TTIK\SZTE_PROJECTS\ANDROID\TechBazaar\app\build\generated\res\resValues\androidTest\debug
+hu.techbazaar.test.app-mergeDebugAndroidTestResources-2 D:\FONTOSSSS\SULI\EGYETEM\TTIK\SZTE_PROJECTS\ANDROID\TechBazaar\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+hu.techbazaar.test.app-mergeDebugAndroidTestResources-3 D:\FONTOSSSS\SULI\EGYETEM\TTIK\SZTE_PROJECTS\ANDROID\TechBazaar\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+hu.techbazaar.test.app-debugAndroidTest-4 D:\FONTOSSSS\SULI\EGYETEM\TTIK\SZTE_PROJECTS\ANDROID\TechBazaar\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
