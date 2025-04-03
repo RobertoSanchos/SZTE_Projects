@@ -89,7 +89,7 @@
             android:layout_marginLeft="10dp"
             android:text="Elfogadom az Általános Szerződési Feltételeket"
             android:textColor="#2C5078"
-            android:buttonTint="#2C5078"
+            android:drawable="@drawable/ch"
             />
         <CheckBox
             android:id="@+id/checkBox2"
@@ -98,7 +98,8 @@
             android:text="Elfogadom az Adatvédelmi nyilatkozatot"
             android:layout_marginLeft="10dp"
             android:textColor="#2C5078"
-            android:buttonTint="#2C5078"/>
+            android:drawable="@drawable/ch"
+            />
 
         <CheckBox
             android:id="@+id/checkBox3"
@@ -107,7 +108,8 @@
             android:text="Feliratkozok a hírlevélre"
             android:layout_marginLeft="10dp"
             android:textColor="#2C5078"
-            android:buttonTint="#2C5078"/>
+            android:drawable="@drawable/ch"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
