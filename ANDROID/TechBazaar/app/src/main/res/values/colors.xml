@@ -8,5 +8,5 @@
 <!--    Night colors-->
     <color name="secondaryc">#e54f00</color>
     <color name="red">#FF0000</color>
-    <color name="darkhint">#CCCCCC</color>
+    <color name="darkhint">#BDBDBD</color>
 </resources>
