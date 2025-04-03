@@ -8,12 +8,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
@@ -73,7 +71,6 @@ public class Home_activity extends AppCompatActivity {
         if(item.getItemId() == R.id.search) return true;
         else if (item.getItemId() == R.id.cart) return true;
         else if (item.getItemId() == R.id.settings) return true;
-        else if (item.getItemId() == R.id.notif) return true;
         else if (item.getItemId() == R.id.fav) return true;
         else if (item.getItemId() == R.id.logout) {
             FirebaseAuth.getInstance().signOut();
