@@ -75,6 +75,7 @@ public class Home_activity extends AppCompatActivity {
         else if (item.getItemId() == R.id.fav) return true;
         else if (item.getItemId() == R.id.logout) {
             FirebaseAuth.getInstance().signOut();
+            finish();
             Intent Start_intent = new Intent(this, Start_activity.class);
             startActivity(Start_intent);
             return true;
