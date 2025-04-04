@@ -29,7 +29,7 @@
     <item>Kingston SSDNow KC400 1 TB\n</item>
     <item>CORSAIR iCUE 5000T RGB TG fekete\n</item>
     <item>Cooler Master MasterCase H500M\n</item>
-</string-array>
+    </string-array>
 
     <string-array name="items_description">
         <item>Órajele: 2,9 GHz \nFoglalat: Intel 1200\nMagok száma: 6\nMax. teljesítmény: 4,3 GHz...</item>
@@ -42,17 +42,21 @@
         <item>Típus: MidiTower \nSzélesség: 248 mm \nMagasság: 546 mm \nMélység: 544 mm Tömeg 14200 g...</item>
     </string-array>
 
-<array name="items_images">
-    <item>@drawable/i5_10400f</item>
-    <item>@drawable/i7_12700k</item>
-    <item>@drawable/asus_b550f</item>
-    <item>@drawable/asrock_b450_pro4</item>
-    <item>@drawable/samsung_870_evo</item>
-    <item>@drawable/kingstone_kc_400</item>
-    <item>@drawable/corsair_case</item>
-    <item>@drawable/cooler_master_case</item>
+    <array name="items_images">
+        <item>@drawable/i5_10400f</item>
+        <item>@drawable/i7_12700k</item>
+        <item>@drawable/asus_b550f</item>
+        <item>@drawable/asrock_b450_pro4</item>
+        <item>@drawable/samsung_870_evo</item>
+        <item>@drawable/kingstone_kc_400</item>
+        <item>@drawable/corsair_case</item>
+        <item>@drawable/cooler_master_case</item>
+    </array>
 
-</array>
+    <array name="category_images">
+        <item>@drawable/motherboard</item>
+    </array>
+
     <array name="items_prices">
         <item>45 224 Ft</item>
         <item>122 443 Ft</item>

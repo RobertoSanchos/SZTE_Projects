@@ -15,11 +15,11 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 
-public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductViewHolder> {
+public class Home_adapter extends RecyclerView.Adapter<Home_adapter.ProductViewHolder> {
     private Context context;
     private List<items> productList;
 
-    public HomeAdapter(Context context, List<items> productList) {
+    public Home_adapter(Context context, List<items> productList) {
         this.context = context;
         this.productList = productList;
     }

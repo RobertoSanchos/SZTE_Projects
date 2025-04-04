@@ -12,16 +12,19 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Home_activity extends AppCompatActivity {
     private RecyclerView home_view;
     private ArrayList<items> home_items;
-    private HomeAdapter iadapter;
+    private Home_adapter iadapter;
     private TextView highlighted;
 
     @Override
@@ -36,12 +39,26 @@ public class Home_activity extends AppCompatActivity {
         home_items = new ArrayList<>();
         load_data();
 
-        iadapter = new HomeAdapter(this, home_items);
+        iadapter = new Home_adapter(this, home_items);
         home_view.setAdapter(iadapter);
 
         highlighted = findViewById(R.id.highlighted);
         Animation slideIn = AnimationUtils.loadAnimation(this, R.anim.slide);
         highlighted.startAnimation(slideIn);
+
+
+
+        RecyclerView categoryRecycler = findViewById(R.id.category_Recycler);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        categoryRecycler.setLayoutManager(layoutManager);
+
+        List<String> categories = Arrays.asList("Alaplap", "Processzor", "Memória", "Videokárrtya","Monitor",
+                "SSD/HDD", "Tápegység", "Számítógépház", "Hűtés", "Nyomtató/szkenner",
+                "Billentyűzet/egér", "Hangszóró", "Kábel");
+        Category_adapter adapter = new Category_adapter(this, categories, selectedCategory -> {
+
+        });
+        categoryRecycler.setAdapter(adapter);
 
     }
 
