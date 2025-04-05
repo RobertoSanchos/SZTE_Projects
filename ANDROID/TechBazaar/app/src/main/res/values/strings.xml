@@ -70,19 +70,19 @@
     </array>
 
     <array name="category_images">
-        <item>@drawable/motherboard</item>
-        <item>@drawable/cpu</item>
-        <item>@drawable/memory</item>
-        <item>@drawable/vga</item>
-        <item>@drawable/monitor</item>
-        <item>@drawable/ssd</item>
-        <item>@drawable/powers</item>
-        <item>@drawable/cases</item>
-        <item>@drawable/cooler</item>
-        <item>@drawable/printer</item>
-        <item>@drawable/keymo</item>
-        <item>@drawable/speaker</item>
-        <item>@drawable/cabel</item>
+        <item>@drawable/motherboard_category</item>
+        <item>@drawable/cpu_category</item>
+        <item>@drawable/memory_category</item>
+        <item>@drawable/vga_category</item>
+        <item>@drawable/monitor_category</item>
+        <item>@drawable/ssd_category</item>
+        <item>@drawable/powers_category</item>
+        <item>@drawable/cases_category</item>
+        <item>@drawable/cooler_category</item>
+        <item>@drawable/printer_category</item>
+        <item>@drawable/keymo_category</item>
+        <item>@drawable/speaker_category</item>
+        <item>@drawable/cabel_category</item>
     </array>
 
     <array name="items_prices">
