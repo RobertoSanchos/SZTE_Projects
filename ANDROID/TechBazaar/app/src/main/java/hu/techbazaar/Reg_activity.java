@@ -29,7 +29,7 @@ public class Reg_activity extends AppCompatActivity {
         setContentView(R.layout.activity_reg);
 
         int sk = getIntent().getIntExtra("SK", 0);
-        if(sk != 34788){
+        if(sk != SK){
             finish();
         }
 

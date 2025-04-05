@@ -27,7 +27,7 @@
         android:id="@+id/later"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Termékek feltöltése később!"
+        android:text="@string/upload_later"
         android:textSize="24sp"
         android:textColor="@color/red"
         android:textStyle="bold"
@@ -40,7 +40,7 @@
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:textColor="@color/white"
-        android:text="Vissza a kezdőoldalra"
+        android:text="@string/back_to_home"
         android:onClick="back_to_home"
         />
 </LinearLayout>

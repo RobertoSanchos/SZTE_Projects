@@ -40,7 +40,7 @@
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:textColor="@color/white"
-        android:text="Vissza a főoldalra"
+        android:text="@string/back_to_home"
         android:onClick="back_to_home"
         />
 </LinearLayout>

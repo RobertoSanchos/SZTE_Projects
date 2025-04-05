@@ -27,7 +27,7 @@
     android:id="@+id/highlighted"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Kiemelt ajánlataink"
+    android:text="@string/highlighted_home"
     android:textSize="24sp"
     android:textColor="@color/red"
     android:textStyle="bold"
