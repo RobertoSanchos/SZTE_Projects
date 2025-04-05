@@ -15,6 +15,14 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
     </androidx.appcompat.widget.Toolbar>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_Recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:overScrollMode="never"
+        android:clipToPadding="false"
+        android:scrollbars="none"/>
 <TextView
     android:id="@+id/highlighted"
     android:layout_width="match_parent"
