@@ -37,12 +37,12 @@ public class categories_activity extends AppCompatActivity {
         category_view.setAdapter(cadapter);
 
         setSupportActionBar(findViewById(R.id.toolbar));
-        String category_name = getIntent().getStringExtra("CATEGORY_NAME");
 
+        String category_name = getIntent().getStringExtra("CATEGORY_NAME");
         back = findViewById(R.id.later);
         back.setText(category_name + " termékek feltöltése később!");
-
     }
+
     private void load_data2(){
         String[] citems_name = getResources().getStringArray(R.array.category_items_name);
         TypedArray citems_images = getResources().obtainTypedArray(R.array.category_images);
@@ -50,10 +50,13 @@ public class categories_activity extends AppCompatActivity {
         category_items.clear();
 
         for (int i = 0; i < citems_name.length;i++){
-            category_items.add(new Category_items(citems_name[i], citems_images.getResourceId(i,0)));
+            category_items.add(new Category_items(citems_name[i],
+                    citems_images.getResourceId(i,0)));
         }
+
         citems_images.recycle();
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -76,9 +79,9 @@ public class categories_activity extends AppCompatActivity {
         }
         else return super.onOptionsItemSelected(item);
     }
+
     public void back_to_home(View view) {
         Intent home_intent = new Intent(this, Home_activity.class);
         startActivity(home_intent);
     }
-
 }

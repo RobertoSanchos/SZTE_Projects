@@ -69,12 +69,12 @@ public class Start_activity extends AppCompatActivity {
         editor.apply();
     }
 
-
     public void register(View view) {
         Intent reg_intent = new Intent(this, Reg_activity.class);
         reg_intent.putExtra("SK", SK);
         startActivity(reg_intent);
     }
+
     private void home(){
         Intent home_intent = new Intent(this, Home_activity.class);
         startActivity(home_intent);

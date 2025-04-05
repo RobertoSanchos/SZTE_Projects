@@ -57,8 +57,6 @@ public class Home_activity extends AppCompatActivity {
         highlighted = findViewById(R.id.highlighted);
         Animation slideIn = AnimationUtils.loadAnimation(this, R.anim.slide);
         highlighted.startAnimation(slideIn);
-
-
     }
 
     private void load_data() {
@@ -72,11 +70,13 @@ public class Home_activity extends AppCompatActivity {
 
         for (int i = 0; i < items_name.length;i++){
             home_items.add(new items(items_name[i], items_description[i],
-                    items_price[i], items_images.getResourceId(i,0), items_rated.getFloat(i, 0)));
+                    items_price[i], items_images.getResourceId(i,0),
+                    items_rated.getFloat(i, 0)));
         }
-        items_images.recycle();
 
+        items_images.recycle();
     }
+
     private void load_data2(){
         String[] citems_name = getResources().getStringArray(R.array.category_items_name);
         TypedArray citems_images = getResources().obtainTypedArray(R.array.category_images);
@@ -86,6 +86,7 @@ public class Home_activity extends AppCompatActivity {
         for (int i = 0; i < citems_name.length;i++){
             category_items.add(new Category_items(citems_name[i], citems_images.getResourceId(i,0)));
         }
+
         citems_images.recycle();
     }
 

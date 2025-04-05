@@ -19,16 +19,10 @@ public class Category_adapter extends RecyclerView.Adapter<Category_adapter.View
 
     private List<Category_items> categories;
     private Context context;
-    //private OnCategoryClickListener listener;
-
-   /* public interface OnCategoryClickListener {
-        void onCategoryClick(Category_items category);
-    }*/
 
     public Category_adapter(Context context, List<Category_items> categories) {
         this.context = context;
         this.categories = categories;
-        //this.listener = listener;
     }
 
     @NonNull
@@ -43,7 +37,6 @@ public class Category_adapter extends RecyclerView.Adapter<Category_adapter.View
         Category_items category = categories.get(position);
         holder.text.setText(category.getCategory_name());
         Glide.with(context).load(category.getCategory_img()).into(holder.cimg);
-
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, categories_activity.class);
             intent.putExtra("CATEGORY_NAME", category.getCategory_name());
