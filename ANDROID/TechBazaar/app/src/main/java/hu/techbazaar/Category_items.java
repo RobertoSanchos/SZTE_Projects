@@ -9,11 +9,6 @@ public class Category_items {
         this.category_img = category_img;
     }
 
-    public int getCategory_img() {
-        return category_img;
-    }
-
-    public String getCategory_name() {
-        return category_name;
-    }
+    public int getCategory_img() {return category_img;}
+    public String getCategory_name() {return category_name;}
 }

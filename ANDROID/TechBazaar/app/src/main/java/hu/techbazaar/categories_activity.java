@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,9 +19,10 @@ import java.util.ArrayList;
 
 public class categories_activity extends AppCompatActivity {
     TextView back;
+
     private RecyclerView category_view;
-    private ArrayList<Category_items> category_items;
     private Category_adapter cadapter;
+    private ArrayList<Category_items> category_items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

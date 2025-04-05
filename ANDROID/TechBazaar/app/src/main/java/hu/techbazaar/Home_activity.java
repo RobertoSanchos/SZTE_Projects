@@ -5,7 +5,6 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
@@ -19,16 +18,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Home_activity extends AppCompatActivity {
     private RecyclerView home_view;
     private RecyclerView category_view;
+
     private ArrayList<items> home_items;
     private ArrayList<Category_items> category_items;
+
     private Home_adapter iadapter;
     private Category_adapter cadapter;
+
     private TextView highlighted;
 
     @Override
@@ -48,7 +48,6 @@ public class Home_activity extends AppCompatActivity {
         category_items = new ArrayList<>();
         load_data();
         load_data2();
-
 
         iadapter = new Home_adapter(this, home_items);
         cadapter = new Category_adapter(this, category_items);
@@ -112,7 +111,4 @@ public class Home_activity extends AppCompatActivity {
         }
         else return super.onOptionsItemSelected(item);
     }
-
-
-
 }
