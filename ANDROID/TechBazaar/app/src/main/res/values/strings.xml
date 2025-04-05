@@ -21,14 +21,30 @@
     <string name="highlighted_home">Kiemelt ajánlataink</string>
 
     <string-array name="items_names">
-    <item>Core i5-10400F \n</item>
-    <item>Core i7-12700K\n</item>
-    <item>Asus ROG STRIX B550-F GAMING\n</item>
-    <item>ASRock B450 Pro4\n</item>
-    <item>SSD 2.5" Samsung 870 Evo 500GB\n</item>
-    <item>Kingston SSDNow KC400 1 TB\n</item>
-    <item>CORSAIR iCUE 5000T RGB TG fekete\n</item>
-    <item>Cooler Master MasterCase H500M\n</item>
+        <item>Core i5-10400F \n</item>
+        <item>Core i7-12700K\n</item>
+        <item>Asus ROG STRIX B550-F GAMING\n</item>
+        <item>ASRock B450 Pro4\n</item>
+        <item>SSD 2.5" Samsung 870 Evo 500GB\n</item>
+        <item>Kingston SSDNow KC400 1 TB\n</item>
+        <item>CORSAIR iCUE 5000T RGB TG fekete\n</item>
+        <item>Cooler Master MasterCase H500M\n</item>
+    </string-array>
+
+    <string-array name="category_items_name">
+        <item>Alaplap</item>
+        <item>Processzor</item>
+        <item>Memória</item>
+        <item>Videokártya</item>
+        <item>Monitor</item>
+        <item>SSD/HDD</item>
+        <item>Tápegység</item>
+        <item>Számítógépház</item>
+        <item>Hűtés</item>
+        <item>Nyomtató/szkenner</item>
+        <item>Billentyűzet/egér</item>
+        <item>Hangszóró</item>
+        <item>Kábel</item>
     </string-array>
 
     <string-array name="items_description">
@@ -55,6 +71,18 @@
 
     <array name="category_images">
         <item>@drawable/motherboard</item>
+        <item>@drawable/cpu</item>
+        <item>@drawable/memory</item>
+        <item>@drawable/vga</item>
+        <item>@drawable/monitor</item>
+        <item>@drawable/ssd</item>
+        <item>@drawable/powers</item>
+        <item>@drawable/cases</item>
+        <item>@drawable/cooler</item>
+        <item>@drawable/printer</item>
+        <item>@drawable/keymo</item>
+        <item>@drawable/speaker</item>
+        <item>@drawable/cabel</item>
     </array>
 
     <array name="items_prices">

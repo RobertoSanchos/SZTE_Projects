@@ -4,27 +4,30 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class Category_adapter extends RecyclerView.Adapter<Category_adapter.ViewHolder> {
 
-    private List<String> categories;
+    private List<Category_items> categories;
     private Context context;
-    private OnCategoryClickListener listener;
+    //private OnCategoryClickListener listener;
 
-    public interface OnCategoryClickListener {
-        void onCategoryClick(String category);
-    }
+   /* public interface OnCategoryClickListener {
+        void onCategoryClick(Category_items category);
+    }*/
 
-    public Category_adapter(Context context, List<String> categories, OnCategoryClickListener listener) {
+    public Category_adapter(Context context, List<Category_items> categories) {
         this.context = context;
         this.categories = categories;
-        this.listener = listener;
+        //this.listener = listener;
     }
 
     @NonNull
@@ -36,21 +39,24 @@ public class Category_adapter extends RecyclerView.Adapter<Category_adapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        String category = categories.get(position);
-        holder.text.setText(category);
-        holder.itemView.setOnClickListener(v -> listener.onCategoryClick(category));
+        Category_items category = categories.get(position);
+        holder.text.setText(category.getCategory_name());
+        Glide.with(context).load(category.getCategory_img()).into(holder.cimg);
+
+        //holder.itemView.setOnClickListener(v -> listener.onCategoryClick(category));
     }
 
     @Override
-    public int getItemCount() {
-        return categories.size();
-    }
+    public int getItemCount() {return categories.size();}
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView text;
+        ImageView cimg;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             text = itemView.findViewById(R.id.categoryText);
+            cimg = itemView.findViewById(R.id.category_images);
         }
     }
 }

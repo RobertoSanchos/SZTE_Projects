@@ -23,8 +23,11 @@ import java.util.List;
 
 public class Home_activity extends AppCompatActivity {
     private RecyclerView home_view;
+    private RecyclerView category_view;
     private ArrayList<items> home_items;
+    private ArrayList<Category_items> category_items;
     private Home_adapter iadapter;
+    private Category_adapter cadapter;
     private TextView highlighted;
 
     @Override
@@ -33,32 +36,28 @@ public class Home_activity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         setSupportActionBar(findViewById(R.id.toolbar));
+
         home_view = findViewById(R.id.home_content);
+        category_view = findViewById(R.id.category_Recycler);
+
         home_view.setLayoutManager(new GridLayoutManager(this, 2));
+        category_view.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         home_items = new ArrayList<>();
+        category_items = new ArrayList<>();
         load_data();
+        load_data2();
+
 
         iadapter = new Home_adapter(this, home_items);
+        cadapter = new Category_adapter(this, category_items);
         home_view.setAdapter(iadapter);
+        category_view.setAdapter(cadapter);
 
         highlighted = findViewById(R.id.highlighted);
         Animation slideIn = AnimationUtils.loadAnimation(this, R.anim.slide);
         highlighted.startAnimation(slideIn);
 
-
-
-        RecyclerView categoryRecycler = findViewById(R.id.category_Recycler);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        categoryRecycler.setLayoutManager(layoutManager);
-
-        List<String> categories = Arrays.asList("Alaplap", "Processzor", "Memória", "Videokárrtya","Monitor",
-                "SSD/HDD", "Tápegység", "Számítógépház", "Hűtés", "Nyomtató/szkenner",
-                "Billentyűzet/egér", "Hangszóró", "Kábel");
-        Category_adapter adapter = new Category_adapter(this, categories, selectedCategory -> {
-
-        });
-        categoryRecycler.setAdapter(adapter);
 
     }
 
@@ -77,6 +76,17 @@ public class Home_activity extends AppCompatActivity {
         }
         items_images.recycle();
 
+    }
+    private void load_data2(){
+        String[] citems_name = getResources().getStringArray(R.array.category_items_name);
+        TypedArray citems_images = getResources().obtainTypedArray(R.array.category_images);
+
+        category_items.clear();
+
+        for (int i = 0; i < citems_name.length;i++){
+            category_items.add(new Category_items(citems_name[i], citems_images.getResourceId(i,0)));
+        }
+        citems_images.recycle();
     }
 
     @Override
