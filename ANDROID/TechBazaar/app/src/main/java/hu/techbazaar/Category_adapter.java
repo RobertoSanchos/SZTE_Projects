@@ -1,6 +1,7 @@
 package hu.techbazaar;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,7 +44,11 @@ public class Category_adapter extends RecyclerView.Adapter<Category_adapter.View
         holder.text.setText(category.getCategory_name());
         Glide.with(context).load(category.getCategory_img()).into(holder.cimg);
 
-        //holder.itemView.setOnClickListener(v -> listener.onCategoryClick(category));
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, categories_activity.class);
+            intent.putExtra("CATEGORY_NAME", category.getCategory_name());
+            context.startActivity(intent);
+        });
     }
 
     @Override
