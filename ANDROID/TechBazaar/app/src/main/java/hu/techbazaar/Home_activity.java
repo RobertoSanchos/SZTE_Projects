@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
@@ -111,4 +112,7 @@ public class Home_activity extends AppCompatActivity {
         }
         else return super.onOptionsItemSelected(item);
     }
+
+
+
 }

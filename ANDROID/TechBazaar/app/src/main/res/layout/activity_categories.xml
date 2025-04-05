@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Home_activity">
+    tools:context=".categories_activity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -24,22 +24,23 @@
         android:clipToPadding="false"
         android:scrollbars="none"/>
     <TextView
-        android:id="@+id/highlighted"
+        android:id="@+id/later"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Termékek feltöltése később!"
+        android:text=""
         android:textSize="24sp"
         android:textColor="@color/red"
         android:textStyle="bold"
         android:gravity="center"
         />
     <Button
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:textColor="@color/white"
-        android:text="Vissza a kezdőoldalra"
+        android:text="Vissza a főoldalra"
         android:onClick="back_to_home"
         />
 </LinearLayout>
